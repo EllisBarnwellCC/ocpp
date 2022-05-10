@@ -5,6 +5,7 @@
                 "title": "Configuración OCPP",
                 "description": "Si necesitas ayuda con la configuración puedes hechar un vistazo en: https://github.com/lbbrhzn/ocpp",
                 "data": {
+                    "allow_availability_timeout": "Permitir tiempo de espera de disponibilidad",
                     "host": "Dirección de host del sistema central",
                     "port": "Número de puerto del sistema central",
                     "csid": "Nombre del sistema central",

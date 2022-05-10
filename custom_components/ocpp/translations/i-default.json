@@ -5,6 +5,7 @@
                 "title": "OCPP Configuration",
                 "description": "If you need help with the configuration have a look here: https://github.com/lbbrhzn/ocpp",
                 "data": {
+                    "allow_availability_timeout": "Allow availability timeout",
                     "host": "Central system host address",
                     "port": "Central system port number",
                     "ssl": "Secure connection",

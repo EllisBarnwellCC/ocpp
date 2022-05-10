@@ -3,6 +3,7 @@ from homeassistant import config_entries
 import voluptuous as vol
 
 from .const import (
+    CONF_ALLOW_AVAILABILITY_TIMEOUT,
     CONF_CPID,
     CONF_CSID,
     CONF_FORCE_SMART_CHARGING,
@@ -43,6 +44,7 @@ from .const import (
 
 STEP_USER_DATA_SCHEMA = vol.Schema(
     {
+        vol.Required(CONF_ALLOW_AVAILABILITY_TIMEOUT, default=False): bool,
         vol.Required(CONF_HOST, default=DEFAULT_HOST): str,
         vol.Required(CONF_PORT, default=DEFAULT_PORT): int,
         vol.Required(CONF_SSL, default=DEFAULT_SSL): bool,

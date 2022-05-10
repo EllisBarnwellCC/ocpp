@@ -49,6 +49,7 @@ from ocpp.v16.enums import (
 )
 
 from .const import (
+    CONF_ALLOW_AVAILABILITY_TIMEOUT,
     CONF_AUTH_LIST,
     CONF_AUTH_STATUS,
     CONF_CPID,
@@ -652,7 +653,14 @@ class ChargePoint(cp):
             typ = AvailabilityType.inoperative.value
 
         req = call.ChangeAvailabilityPayload(connector_id=0, type=typ)
-        resp = await self.call(req)
+        try:
+            resp = await self.call(req)
+        except asyncio.TimeoutError as e:
+            if self.entry.data.get(CONF_ALLOW_AVAILABILITY_TIMEOUT):
+                _LOGGER.exception(f'Ignoring ChangeAvailability timeout')
+                return False
+            else:
+                raise e
         if resp.status == AvailabilityStatus.accepted:
             return True
         else:

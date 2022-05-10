@@ -9,6 +9,7 @@ from ocpp.v16.enums import Measurand, UnitOfMeasure
 
 CONF_AUTH_LIST = "authorization_list"
 CONF_AUTH_STATUS = "authorization_status"
+CONF_ALLOW_AVAILABILITY_TIMEOUT = "allow_availability_timeout"
 CONF_CPI = "charge_point_identity"
 CONF_CPID = "cpid"
 CONF_CSID = "csid"

@@ -5,6 +5,7 @@
                 "title": "OCPP-Konfiguration",
                 "description": "Wenn du Hilfe bei der Konfiguration benötigst, schaue hier nach: https://github.com/lbbrhzn/ocpp",
                 "data": {
+                    "allow_availability_timeout": "Verfügbarkeits-Timeout zulassen",
                     "host": "Host-Adresse des Zentralsystems",
                     "port": "Portnummer des Zentralsystems",
                     "csid": "Identität des Zentralsystems",
